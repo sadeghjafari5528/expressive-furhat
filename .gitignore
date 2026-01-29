@@ -1,0 +1,12 @@
+/.vscode/**
+!/.vscode/extensions.json
+
+/.github/**
+!/.github/workflows
+!/.github/workflows/**
+
+/*.egg-info/
+/venv/
+/dist/
+**/__pycache__/
+**/.pytest_cache/

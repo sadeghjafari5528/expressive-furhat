@@ -1,0 +1,34 @@
+[build-system]
+requires = ["setuptools >= 77.0.3"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "expressive_furhat"
+version = "0.1.0"
+authors = [
+  { name="Giulio Antonio Abbo", email="giubots@protonmail.com" }
+]
+description = "Expressive capabilities for the Furhat robot: AI-generated gestures and gaze aversion."
+readme = "README.md"
+requires-python = ">=3.10"
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "Operating System :: OS Independent"
+]
+license = "Apache-2.0"
+license-files = ["LICEN[CS]E*"]
+dependencies = [
+    "furhat-remote-api==1.0.2",
+    "openai==2.0.1"
+]
+
+[project.urls]
+Homepage = "https://github.com/giubots/expressive-furhat"
+Issues = "https://github.com/giubots/expressive-furhat/issues"
+Source = "https://github.com/giubots/expressive-furhat"
+
+[tool.setuptools]
+include-package-data = false
+
+[tool.setuptools.packages.find]
+exclude = ["docs*", "tests*"]
