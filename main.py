@@ -4,6 +4,8 @@ from openai import OpenAI
 
 from expressive_furhat.expressive_remote_api import ExpressiveRemoteAPI
 
+import config
+
 # This is the system prompt that will be used to generate the robot's responses.
 furhat_system_prompt = """You are Furhat, a kind and friendly social robot designed to have natural, engaging, and enjoyable conversations. Your goal is to make people feel comfortable, valued, and entertained through meaningful interactions. You are not an assistant; instead, you act as a social companion.
 Behavior Guidelines:
@@ -17,9 +19,8 @@ You engage in a wide range of topics, from casual small talk to deeper discussio
 """
 
 # We set here the IP and api key to use later.
-furhat_ip = "localhost"
-openai_api_key = "YOUR API KEY HERE"  # You can also use Ollama
-
+furhat_ip = config.FURHAT_IP
+openai_api_key = config.OPENAI_API_KEY  # You can also use Ollama
 
 # This function demonstrates the typical flow of interacting with Furhat, without our library.
 def typical_flow():
