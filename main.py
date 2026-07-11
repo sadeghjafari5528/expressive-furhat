@@ -100,6 +100,15 @@ def expressive_flow():
         print("Exiting...")
 
 
+def emotion_specific_flow(story: list, emotion: str):
+    client = OpenAI(api_key=openai_api_key)
+    furhat = ExpressiveRemoteAPI(furhat_ip, openai=client)
+
+    for message in story:
+        furhat.react_to_text(message)
+        furhat.say(text=message, blocking=True)
+
+
 if __name__ == "__main__":
     # You can uncomment the following lines to enable additional log output.
     # import logging
