@@ -3,6 +3,7 @@ from furhat_remote_api import FurhatRemoteAPI
 from openai import OpenAI
 
 from expressive_furhat.expressive_remote_api import ExpressiveRemoteAPI
+from expressive_furhat.gesture_generation import GestureGeneration
 
 import config
 
@@ -105,7 +106,7 @@ def emotion_specific_flow(story: list, emotion: str):
     furhat = ExpressiveRemoteAPI(furhat_ip, openai=client)
 
     for message in story:
-        furhat.react_to_text(message)
+        furhat.react_to_text(message, emotion=emotion)
         furhat.say(text=message, blocking=True)
 
 
@@ -113,4 +114,7 @@ if __name__ == "__main__":
     # You can uncomment the following lines to enable additional log output.
     # import logging
     # logging.basicConfig(level=logging.INFO)
-    expressive_flow()  # use typical_flow() if you want to compare with the default implementation
+    # expressive_flow()  # use typical_flow() if you want to compare with the default implementation
+
+    import config
+    emotion_specific_flow(config.surprise_story, None)

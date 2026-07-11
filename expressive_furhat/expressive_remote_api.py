@@ -77,13 +77,16 @@ class ExpressiveRemoteAPI(FurhatRemoteAPI):
         self.set_voice(name=voice)
         self.set_led(**leds)
 
-    def react_to_text(self, text: str):
+    def react_to_text(self, text: str, emotion: str | None = None):
         """Track the user's input and generate gestures based on it."""
         self._conversation.append({"role": "user", "content": text})
         transcript = "\n".join(
             [f"{item['role']}: {item['content']}" for item in self._conversation]
         )
-        self.gesture_gen.on_user_input(transcript)
+        if emotion:
+            self.gesture_gen.on_user_input_with_emotion(transcript, emotion=emotion)
+        else:
+            self.gesture_gen.on_user_input(transcript)
 
     @override
     def say(self, **kwargs):

@@ -154,20 +154,39 @@ class GestureGeneration:
             conversation (str): A string representing the conversation between
                 the user and the robot.
         """
+        self.on_user_input_with_emotion(conversation=conversation, emotion=None)
+
+    def on_user_input_with_emotion(
+        self, conversation: str, emotion: str | None = None
+    ):
+        """Generate gestures with an optional forced emotion.
+
+        If ``emotion`` is ``None`` (or the string ``"none"``), behavior is
+        identical to ``on_user_input``. Otherwise, the emotion is injected into
+        prompt messages to strongly bias/force generation toward that emotion.
+
+        Args:
+            conversation (str): A string representing the conversation between
+                the user and the robot.
+            emotion (str | None, optional): Emotion to force in generated
+                gestures (e.g. ``"joy"``, ``"sadness"``, ``"anger"``).
+                Defaults to ``None``.
+        """
+        normalized_emotion = self._normalize_emotion(emotion)
         self._cache_ready.clear()
         threading.Thread(
             target=self._multiple_generate_gesture,
-            args=(conversation,),
+            args=(conversation, normalized_emotion),
             daemon=True,
         ).start()
 
         threading.Thread(
             target=self._check_mood_change,
-            args=(conversation,),
+            args=(conversation, normalized_emotion),
             daemon=True,
         ).start()
 
-    def _check_mood_change(self, conversation: str):
+    def _check_mood_change(self, conversation: str, emotion: str | None = None):
         messages = [
             {"role": "system", "content": self.mood_change_system_prompt},
             {"role": "user", "content": conversation},
@@ -186,7 +205,7 @@ class GestureGeneration:
             self.bg_thread.flush_cache()
             threading.Thread(
                 target=self._fast_generate_gesture,
-                args=(conversation,),
+                args=(conversation, emotion),
                 daemon=True,
             ).start()
         else:
@@ -195,10 +214,14 @@ class GestureGeneration:
                 self._since_last_mood_change += 1
         self._cache_ready.set()
 
-    def _fast_generate_gesture(self, conversation: str):
+    def _fast_generate_gesture(self, conversation: str, emotion: str | None = None):
+        emotion_instruction = self._emotion_instruction(emotion)
         messages = [
-            {"role": "system", "content": self.fast_generate_system_prompt},
-            {"role": "user", "content": conversation},
+            {
+                "role": "system",
+                "content": self.fast_generate_system_prompt + emotion_instruction,
+            },
+            {"role": "user", "content": conversation + emotion_instruction},
         ]
         response = self.openai.chat.completions.create(
             model=self.fast_generate_model,
@@ -218,14 +241,23 @@ class GestureGeneration:
         with self._lock:
             self.bg_thread.add_gesture_to_cache(self._since_last_mood_change, gesture)
 
-    def _multiple_generate_gesture(self, conversation: str):
-        robot_behavior = self._get_robot_behavior(conversation)
+    def _multiple_generate_gesture(
+        self, conversation: str, emotion: str | None = None
+    ):
+        emotion_instruction = self._emotion_instruction(emotion)
+        robot_behavior = self._get_robot_behavior(conversation, emotion)
         structured_conversation = self.multiple_generate_user_prompt.format(
             conversation=conversation, robot_behavior=robot_behavior
         )
         messages = [
-            {"role": "system", "content": self.multiple_generate_system_prompt},
-            {"role": "user", "content": structured_conversation},
+            {
+                "role": "system",
+                "content": self.multiple_generate_system_prompt + emotion_instruction,
+            },
+            {
+                "role": "user",
+                "content": structured_conversation + emotion_instruction,
+            },
         ]
         response_stream = self.openai.chat.completions.create(
             model=self.multiple_generate_model,
@@ -270,12 +302,16 @@ class GestureGeneration:
                             )
                         gesture_buffer = ""
 
-    def _get_robot_behavior(self, conversation: str):
+    def _get_robot_behavior(self, conversation: str, emotion: str | None = None):
+        emotion_instruction = self._emotion_instruction(emotion)
         prompt = self.reasoning_user_prompt.format(conversation=conversation)
 
         messages = [
-            {"role": "system", "content": self.reasoning_system_prompt},
-            {"role": "user", "content": prompt},
+            {
+                "role": "system",
+                "content": self.reasoning_system_prompt + emotion_instruction,
+            },
+            {"role": "user", "content": prompt + emotion_instruction},
         ]
         response = self.openai.chat.completions.create(
             model=self.reasoning_model,
@@ -292,6 +328,26 @@ class GestureGeneration:
                 "Response did not contain [End reasoning] marker, using full response"
             )
         return robot_behavior
+
+    def _normalize_emotion(self, emotion: str | None) -> str | None:
+        if emotion is None:
+            return None
+        normalized = emotion.strip()
+        if normalized == "" or normalized.lower() in {"none", "null", "default"}:
+            return None
+        return normalized
+
+    def _emotion_instruction(self, emotion: str | None) -> str:
+        normalized = self._normalize_emotion(emotion)
+        if normalized is None:
+            return ""
+        return (
+            "\n\n[Emotion constraint]\n"
+            f"Target emotion: {normalized}.\n"
+            "You MUST make generated behavior and gestures clearly express this "
+            "emotion. Keep consistency with this target emotion across all "
+            "generated gestures."
+        )
 
     def _parse_gesture(
         self, list_of_gestures: list[dict[str, float]]
