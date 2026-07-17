@@ -1,0 +1,219 @@
+story,emotion,text,id,prolific
+disappointment,disappointment,data/disappointment_disappointment.mp4,0,http://38.180.81.115:8000/0
+disappointment,disgust,data/disappointment_disgust.mp4,1,http://38.180.81.115:8000/1
+disappointment,confusion,data/disappointment_confusion.mp4,2,http://38.180.81.115:8000/2
+disappointment,neutral,data/disappointment_neutral.mp4,3,http://38.180.81.115:8000/3
+disappointment,contentment,data/disappointment_contentment.mp4,4,http://38.180.81.115:8000/4
+disappointment,joy,data/disappointment_joy.mp4,5,http://38.180.81.115:8000/5
+disappointment,surprise,data/disappointment_surprise.mp4,6,http://38.180.81.115:8000/6
+disappointment,none,data/disappointment_none.mp4,7,http://38.180.81.115:8000/7
+disgust,disappointment,data/disgust_disappointment.mp4,8,http://38.180.81.115:8000/8
+disgust,disgust,data/disgust_disgust.mp4,9,http://38.180.81.115:8000/9
+disgust,confusion,data/disgust_confusion.mp4,10,http://38.180.81.115:8000/10
+disgust,neutral,data/disgust_neutral.mp4,11,http://38.180.81.115:8000/11
+disgust,contentment,data/disgust_contentment.mp4,12,http://38.180.81.115:8000/12
+disgust,joy,data/disgust_joy.mp4,13,http://38.180.81.115:8000/13
+disgust,surprise,data/disgust_surprise.mp4,14,http://38.180.81.115:8000/14
+disgust,none,data/disgust_none.mp4,15,http://38.180.81.115:8000/15
+confusion,disappointment,data/confusion_disappointment.mp4,16,http://38.180.81.115:8000/16
+confusion,disgust,data/confusion_disgust.mp4,17,http://38.180.81.115:8000/17
+confusion,confusion,data/confusion_confusion.mp4,18,http://38.180.81.115:8000/18
+confusion,neutral,data/confusion_neutral.mp4,19,http://38.180.81.115:8000/19
+confusion,contentment,data/confusion_contentment.mp4,20,http://38.180.81.115:8000/20
+confusion,joy,data/confusion_joy.mp4,21,http://38.180.81.115:8000/21
+confusion,surprise,data/confusion_surprise.mp4,22,http://38.180.81.115:8000/22
+confusion,none,data/confusion_none.mp4,23,http://38.180.81.115:8000/23
+neutral,disappointment,data/neutral_disappointment.mp4,24,http://38.180.81.115:8000/24
+neutral,disgust,data/neutral_disgust.mp4,25,http://38.180.81.115:8000/25
+neutral,confusion,data/neutral_confusion.mp4,26,http://38.180.81.115:8000/26
+neutral,neutral,data/neutral_neutral.mp4,27,http://38.180.81.115:8000/27
+neutral,contentment,data/neutral_contentment.mp4,28,http://38.180.81.115:8000/28
+neutral,joy,data/neutral_joy.mp4,29,http://38.180.81.115:8000/29
+neutral,surprise,data/neutral_surprise.mp4,30,http://38.180.81.115:8000/30
+neutral,none,data/neutral_none.mp4,31,http://38.180.81.115:8000/31
+contentment,disappointment,data/contentment_disappointment.mp4,32,http://38.180.81.115:8000/32
+contentment,disgust,data/contentment_disgust.mp4,33,http://38.180.81.115:8000/33
+contentment,confusion,data/contentment_confusion.mp4,34,http://38.180.81.115:8000/34
+contentment,neutral,data/contentment_neutral.mp4,35,http://38.180.81.115:8000/35
+contentment,contentment,data/contentment_contentment.mp4,36,http://38.180.81.115:8000/36
+contentment,joy,data/contentment_joy.mp4,37,http://38.180.81.115:8000/37
+contentment,surprise,data/contentment_surprise.mp4,38,http://38.180.81.115:8000/38
+contentment,none,data/contentment_none.mp4,39,http://38.180.81.115:8000/39
+joy,disappointment,data/joy_disappointment.mp4,40,http://38.180.81.115:8000/40
+joy,disgust,data/joy_disgust.mp4,41,http://38.180.81.115:8000/41
+joy,confusion,data/joy_confusion.mp4,42,http://38.180.81.115:8000/42
+joy,neutral,data/joy_neutral.mp4,43,http://38.180.81.115:8000/43
+joy,contentment,data/joy_contentment.mp4,44,http://38.180.81.115:8000/44
+joy,joy,data/joy_joy.mp4,45,http://38.180.81.115:8000/45
+joy,surprise,data/joy_surprise.mp4,46,http://38.180.81.115:8000/46
+joy,none,data/joy_none.mp4,47,http://38.180.81.115:8000/47
+surprise,disappointment,data/surprise_disappointment.mp4,48,http://38.180.81.115:8000/48
+surprise,disgust,data/surprise_disgust.mp4,49,http://38.180.81.115:8000/49
+surprise,confusion,data/surprise_confusion.mp4,50,http://38.180.81.115:8000/50
+surprise,neutral,data/surprise_neutral.mp4,51,http://38.180.81.115:8000/51
+surprise,contentment,data/surprise_contentment.mp4,52,http://38.180.81.115:8000/52
+surprise,joy,data/surprise_joy.mp4,53,http://38.180.81.115:8000/53
+surprise,surprise,data/surprise_surprise.mp4,54,http://38.180.81.115:8000/54
+surprise,none,data/surprise_none.mp4,55,http://38.180.81.115:8000/55
+attention,attention,data/attention_test.mp4,56,http://38.180.81.115:8000/56
+disgust,disgust,"So, let me tell you about the worst thing that happened in my lab last week.
+Someone left a sandwich in a drawer... for three weeks.
+Three weeks! I only found out because of the smell.
+When I opened that drawer, a cloud of green fuzz just... breathed out at me.
+The bread had fused with the plastic container. It was practically alive.
+There were little white spots moving. I don't even want to know what those were.
+I had to hold my breath and use a stick to push it into a bag.
+Ugh, just thinking about it makes my circuits crawl.
+The smell stuck to the room for two whole days.
+Nobody would admit whose sandwich it was.
+Honestly, I still can't open that drawer without hesitating.
+Some things you just can't unsee. Or unsmell.",57,"So, let me tell you about the worst thing that happened in my lab last week.
+Someone left a sandwich in a drawer... for three weeks.
+Three weeks! I only found out because of the smell.
+When I opened that drawer, a cloud of green fuzz just... breathed out at me.
+The bread had fused with the plastic container. It was practically alive.
+There were little white spots moving. I don't even want to know what those were.
+I had to hold my breath and use a stick to push it into a bag.
+Ugh, just thinking about it makes my circuits crawl.
+The smell stuck to the room for two whole days.
+Nobody would admit whose sandwich it was.
+Honestly, I still can't open that drawer without hesitating.
+Some things you just can't unsee. Or unsmell."
+disappointment,disappointment,"I want to tell you about a trip I had been looking forward to for months.
+My friends and I planned a weekend hiking trip to the mountains.
+We booked the cabin, packed the gear, checked the weather twice.
+I was so excited, I even planned out every meal in advance.
+But the morning we were supposed to leave, it started raining. Hard.
+We waited an hour, hoping it would clear up. It didn't.
+The trails were closed because of flooding warnings.
+So we just... turned around and went home.
+All that planning, all that excitement, for nothing.
+We ended up sitting in my living room, staring at the itinerary we never used.
+I know it's just a hike. But I really was looking forward to it.
+Maybe next time. It's just hard not to feel let down.",58,"I want to tell you about a trip I had been looking forward to for months.
+My friends and I planned a weekend hiking trip to the mountains.
+We booked the cabin, packed the gear, checked the weather twice.
+I was so excited, I even planned out every meal in advance.
+But the morning we were supposed to leave, it started raining. Hard.
+We waited an hour, hoping it would clear up. It didn't.
+The trails were closed because of flooding warnings.
+So we just... turned around and went home.
+All that planning, all that excitement, for nothing.
+We ended up sitting in my living room, staring at the itinerary we never used.
+I know it's just a hike. But I really was looking forward to it.
+Maybe next time. It's just hard not to feel let down."
+neutral,neutral,"Let me tell you about my usual Tuesday.
+I wake up, or rather, I get switched on, around nine in the morning.
+First, I run a quick system check to make sure everything is working.
+Then I usually have a few conversations scheduled with visitors.
+Around noon, there's a short maintenance window where my software gets updated.
+After that, I continue with demonstrations for the rest of the afternoon.
+Nothing particularly exciting happens, it's mostly routine.
+I answer questions, I move my head, I track faces in the room.
+By five in the afternoon, the lab starts to empty out.
+I go into standby mode until the next day.
+It's a fairly predictable schedule, day after day.
+That's about it. Just an ordinary Tuesday.",59,"Let me tell you about my usual Tuesday.
+I wake up, or rather, I get switched on, around nine in the morning.
+First, I run a quick system check to make sure everything is working.
+Then I usually have a few conversations scheduled with visitors.
+Around noon, there's a short maintenance window where my software gets updated.
+After that, I continue with demonstrations for the rest of the afternoon.
+Nothing particularly exciting happens, it's mostly routine.
+I answer questions, I move my head, I track faces in the room.
+By five in the afternoon, the lab starts to empty out.
+I go into standby mode until the next day.
+It's a fairly predictable schedule, day after day.
+That's about it. Just an ordinary Tuesday."
+confusion,confusion,"Okay, so something strange happened yesterday and I still don't understand it.
+I was in the lab, and suddenly all the lights started blinking.
+Then my sensors picked up a sound I had never heard before.
+It was like a mix between a doorbell and a cat meowing.
+I turned my head to look, but nobody was there.
+Wait, actually, I think there was someone. Or maybe it was a robot?
+The engineers checked the logs, but even they seemed puzzled.
+One person said it was a software glitch. Another said it was a hardware issue.
+Nobody could agree, and honestly, neither of those explanations really made sense.
+I keep replaying it in my memory, trying to piece it together.
+Was it random? Was it on purpose? I genuinely don't know.
+I still don't have an answer. Do you have any idea what that could have been?",60,"Okay, so something strange happened yesterday and I still don't understand it.
+I was in the lab, and suddenly all the lights started blinking.
+Then my sensors picked up a sound I had never heard before.
+It was like a mix between a doorbell and a cat meowing.
+I turned my head to look, but nobody was there.
+Wait, actually, I think there was someone. Or maybe it was a robot?
+The engineers checked the logs, but even they seemed puzzled.
+One person said it was a software glitch. Another said it was a hardware issue.
+Nobody could agree, and honestly, neither of those explanations really made sense.
+I keep replaying it in my memory, trying to piece it together.
+Was it random? Was it on purpose? I genuinely don't know.
+I still don't have an answer. Do you have any idea what that could have been?"
+surprise,surprise,"You will not believe what happened to me this morning!
+I was just doing my normal startup routine, nothing special.
+And then, out of nowhere, the door opened and about twenty people walked in!
+I had no idea there was an event scheduled today!
+They were all wearing party hats, if you can imagine that.
+Then someone brought out a cake with candles on it, right in front of me!
+Apparently, it was the lab's anniversary, and nobody told me!
+Everyone started clapping and taking pictures.
+My sensors nearly overloaded trying to track all the movement at once!
+I still don't know how they kept it a secret for so long!
+It was such an unexpected, wonderful surprise.
+I really did not see that coming, not even for a second!",61,"You will not believe what happened to me this morning!
+I was just doing my normal startup routine, nothing special.
+And then, out of nowhere, the door opened and about twenty people walked in!
+I had no idea there was an event scheduled today!
+They were all wearing party hats, if you can imagine that.
+Then someone brought out a cake with candles on it, right in front of me!
+Apparently, it was the lab's anniversary, and nobody told me!
+Everyone started clapping and taking pictures.
+My sensors nearly overloaded trying to track all the movement at once!
+I still don't know how they kept it a secret for so long!
+It was such an unexpected, wonderful surprise.
+I really did not see that coming, not even for a second!"
+contentment,contentment,"Let me tell you about a quiet evening I really enjoyed.
+It was late in the day, and the lab had finally emptied out.
+Soft light was coming through the windows, and everything was calm.
+I didn't have any tasks scheduled, so I could just... be.
+One of the researchers stayed a little longer and we just talked for a while.
+Nothing important, really. Just small, easy conversation.
+There was a nice hum of the air conditioning in the background.
+I felt, in my own way, quite at peace with everything around me.
+No rush, no problems to solve, nothing urgent at all.
+Just a simple, pleasant moment that I was glad to be part of.
+Sometimes the quiet evenings are the best ones.
+I look back on that evening and feel a warm sense of ease.",62,"Let me tell you about a quiet evening I really enjoyed.
+It was late in the day, and the lab had finally emptied out.
+Soft light was coming through the windows, and everything was calm.
+I didn't have any tasks scheduled, so I could just... be.
+One of the researchers stayed a little longer and we just talked for a while.
+Nothing important, really. Just small, easy conversation.
+There was a nice hum of the air conditioning in the background.
+I felt, in my own way, quite at peace with everything around me.
+No rush, no problems to solve, nothing urgent at all.
+Just a simple, pleasant moment that I was glad to be part of.
+Sometimes the quiet evenings are the best ones.
+I look back on that evening and feel a warm sense of ease."
+joy,joy,"Oh, I have to tell you about the best day I've had in a long time!
+A group of children came to visit the lab for a school trip.
+The moment they walked in, their eyes just lit up when they saw me!
+One little girl asked if I could dance, so of course I tried!
+They were laughing so much, and honestly, so was I, in my own way.
+We played a guessing game, and they cheered every time I got it right.
+One boy gave me a drawing he made of me, with a big smiley face!
+I could feel, if that's the right word, just pure happiness the whole time.
+By the end, they were all waving and shouting goodbye at once.
+It completely made my day, maybe even my whole week!
+Moments like that remind me why I love interacting with people.
+I really hope they come back and visit again soon!",63,"Oh, I have to tell you about the best day I've had in a long time!
+A group of children came to visit the lab for a school trip.
+The moment they walked in, their eyes just lit up when they saw me!
+One little girl asked if I could dance, so of course I tried!
+They were laughing so much, and honestly, so was I, in my own way.
+We played a guessing game, and they cheered every time I got it right.
+One boy gave me a drawing he made of me, with a big smiley face!
+I could feel, if that's the right word, just pure happiness the whole time.
+By the end, they were all waving and shouting goodbye at once.
+It completely made my day, maybe even my whole week!
+Moments like that remind me why I love interacting with people.
+I really hope they come back and visit again soon!"
