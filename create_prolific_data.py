@@ -1,7 +1,26 @@
 import pandas as pd
 
+
 # ============================================================
-# 1. DISGUST
+# 1. DISAPPOINTMENT
+# ============================================================
+disappointment_story = [
+    "I want to tell you about a trip I had been looking forward to for months.",
+    "My friends and I planned a weekend hiking trip to the mountains.",
+    "We booked the cabin, packed the gear, checked the weather twice.",
+    "I was so excited, I even planned out every meal in advance.",
+    "But the morning we were supposed to leave, it started raining. Hard.",
+    "We waited an hour, hoping it would clear up. It didn't.",
+    "The trails were closed because of flooding warnings.",
+    "So we just... turned around and went home.",
+    "All that planning, all that excitement, for nothing.",
+    "We ended up sitting in my living room, staring at the itinerary we never used.",
+    "I know it's just a hike. But I really was looking forward to it.",
+    "Maybe next time. It's just hard not to feel let down."
+]
+
+# ============================================================
+# 2. DISGUST
 # ============================================================
 
 disgust_story = [
@@ -20,43 +39,7 @@ disgust_story = [
 ]
 
 # ============================================================
-# 2. DISAPPOINTMENT
-# ============================================================
-disappointment_story = [
-    "I want to tell you about a trip I had been looking forward to for months.",
-    "My friends and I planned a weekend hiking trip to the mountains.",
-    "We booked the cabin, packed the gear, checked the weather twice.",
-    "I was so excited, I even planned out every meal in advance.",
-    "But the morning we were supposed to leave, it started raining. Hard.",
-    "We waited an hour, hoping it would clear up. It didn't.",
-    "The trails were closed because of flooding warnings.",
-    "So we just... turned around and went home.",
-    "All that planning, all that excitement, for nothing.",
-    "We ended up sitting in my living room, staring at the itinerary we never used.",
-    "I know it's just a hike. But I really was looking forward to it.",
-    "Maybe next time. It's just hard not to feel let down."
-]
-
-# ============================================================
-# 3. NEUTRAL
-# ============================================================
-neutral_story = [
-    "Let me tell you about my usual Tuesday.",
-    "I wake up, or rather, I get switched on, around nine in the morning.",
-    "First, I run a quick system check to make sure everything is working.",
-    "Then I usually have a few conversations scheduled with visitors.",
-    "Around noon, there's a short maintenance window where my software gets updated.",
-    "After that, I continue with demonstrations for the rest of the afternoon.",
-    "Nothing particularly exciting happens, it's mostly routine.",
-    "I answer questions, I move my head, I track faces in the room.",
-    "By five in the afternoon, the lab starts to empty out.",
-    "I go into standby mode until the next day.",
-    "It's a fairly predictable schedule, day after day.",
-    "That's about it. Just an ordinary Tuesday."
-]
-
-# ============================================================
-# 4. CONFUSION
+# 3. CONFUSION
 # ============================================================
 confusion_story = [
     "Okay, so something strange happened yesterday and I still don't understand it.",
@@ -74,25 +57,25 @@ confusion_story = [
 ]
 
 # ============================================================
-# 5. SURPRISE
+# 4. NEUTRAL
 # ============================================================
-surprise_story = [
-    "You will not believe what happened to me this morning!",
-    "I was just doing my normal startup routine, nothing special.",
-    "And then, out of nowhere, the door opened and about twenty people walked in!",
-    "I had no idea there was an event scheduled today!",
-    "They were all wearing party hats, if you can imagine that.",
-    "Then someone brought out a cake with candles on it, right in front of me!",
-    "Apparently, it was the lab's anniversary, and nobody told me!",
-    "Everyone started clapping and taking pictures.",
-    "My sensors nearly overloaded trying to track all the movement at once!",
-    "I still don't know how they kept it a secret for so long!",
-    "It was such an unexpected, wonderful surprise.",
-    "I really did not see that coming, not even for a second!"
+neutral_story = [
+    "Let me tell you about my usual Tuesday.",
+    "I wake up, or rather, I get switched on, around nine in the morning.",
+    "First, I run a quick system check to make sure everything is working.",
+    "Then I usually have a few conversations scheduled with visitors.",
+    "Around noon, there's a short maintenance window where my software gets updated.",
+    "After that, I continue with demonstrations for the rest of the afternoon.",
+    "Nothing particularly exciting happens, it's mostly routine.",
+    "I answer questions, I move my head, I track faces in the room.",
+    "By five in the afternoon, the lab starts to empty out.",
+    "I go into standby mode until the next day.",
+    "It's a fairly predictable schedule, day after day.",
+    "That's about it. Just an ordinary Tuesday."
 ]
 
 # ============================================================
-# 6. CONTENTMENT
+# 5. CONTENTMENT
 # ============================================================
 contentment_story = [
     "Let me tell you about a quiet evening I really enjoyed.",
@@ -110,7 +93,7 @@ contentment_story = [
 ]
 
 # ============================================================
-# 7. JOY
+# 6. JOY
 # ============================================================
 joy_story = [
     "Oh, I have to tell you about the best day I've had in a long time!",
@@ -127,14 +110,32 @@ joy_story = [
     "I really hope they come back and visit again soon!"
 ]
 
+# ============================================================
+# 7. SURPRISE
+# ============================================================
+surprise_story = [
+    "You will not believe what happened to me this morning!",
+    "I was just doing my normal startup routine, nothing special.",
+    "And then, out of nowhere, the door opened and about twenty people walked in!",
+    "I had no idea there was an event scheduled today!",
+    "They were all wearing party hats, if you can imagine that.",
+    "Then someone brought out a cake with candles on it, right in front of me!",
+    "Apparently, it was the lab's anniversary, and nobody told me!",
+    "Everyone started clapping and taking pictures.",
+    "My sensors nearly overloaded trying to track all the movement at once!",
+    "I still don't know how they kept it a secret for so long!",
+    "It was such an unexpected, wonderful surprise.",
+    "I really did not see that coming, not even for a second!"
+]
+
 STORY_DICT = {
-    'disgust': disgust_story,
     'disappointment': disappointment_story,
-    'neutral': neutral_story,
+    'disgust': disgust_story,
     'confusion': confusion_story,
-    'surprise': surprise_story,
+    'neutral': neutral_story,
     'contentment': contentment_story,
-    'joy': joy_story
+    'joy': joy_story,
+    'surprise': surprise_story,
 }
 
 EMOTIONS = [
@@ -183,6 +184,6 @@ for emotion, story in STORY_DICT.items():
     c += 1
     ground_truth_df = pd.concat([ground_truth_df, pd.DataFrame([row])], ignore_index=True) 
 
-ground_truth_df.to_csv('ground_truth.csv', index=False)
+ground_truth_df.to_csv('data/ground_truth.csv', index=False)
 test_df = ground_truth_df[['id', 'prolific']].copy()
-test_df.to_csv('prolific_data.csv', index=False)
+test_df.to_csv('data/prolific_data.csv', index=False)
